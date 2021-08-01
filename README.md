@@ -1,0 +1,1 @@
+This Todo app takes an input of your task and then stores it which can then be updated or deleted and when the task is completed we can also cross out the task.

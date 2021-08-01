@@ -1,0 +1,25 @@
+{% extends 'tasks/master/base.html' %}
+
+{% block 'title' %}
+	Delete Task
+{% endblock %}
+
+{% block 'content' %}
+<h1 class="text-center">Delete Task</h1>
+
+<div class="center-column">
+	
+	<div class="todo-list">
+		<h6 style="text-align: center; margin-bottom: 20px;">Are You Sure You Want To Delete <b>"{{item}}"</b>?</h6>
+		<div class="item-row">
+			<a class="btn btn-lg btn-block btn-info" href="{% url 'list' %}">Cancel</a>
+			<form method="POST" action="">
+				{% csrf_token %}
+				<input class="btn btn-lg btn-block btn-danger" type="submit" value="Confirm">
+			</form>
+
+		</div>
+	</div>
+
+</div>
+{% endblock %}
